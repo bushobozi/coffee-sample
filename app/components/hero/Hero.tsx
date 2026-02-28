@@ -149,14 +149,14 @@ const Hero = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-          <div className="flex justify-end">
+          <div className="absolute top-0 right-0 z-20 p-4 lg:static lg:p-0 lg:flex lg:justify-end">
             <Button
               variant="ghost"
               size="xl"
               type="button"
-              className="h-25 w-45 rounded-2xl"
+              className="h-16 w-28 lg:h-25 lg:w-45 rounded-2xl"
             >
-              <span className="text-gray-900 rounded-full p-2 group-hover:bg-gray-200 transition">
+              <span className="text-gray-900 rounded-full p-2 group-hover:bg-gray-200 transition scale-75 lg:scale-100 block">
                 <SVG width="65" height="65" />
               </span>
             </Button>
