@@ -149,7 +149,7 @@ const Hero = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-          <div className="absolute top-0 right-0 z-20 p-4 lg:static lg:p-0 lg:flex lg:justify-end">
+          <div className="absolute top-0 right-0 z-20 p-4 lg:static lg:p-0 lg:flex hidden lg:justify-end">
             <Button
               variant="ghost"
               size="xl"
