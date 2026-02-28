@@ -23,9 +23,9 @@ const NavBar = () => {
   }
 
   return (
-    <div className="sticky top-0 z-50 border-r-0 border-l-0 border border-t-0 border-gray-50/30">
+    <div className="sticky backdrop-blur-3xl top-0 z-50 border-r-0 border-l-0 border border-t-0 dark:border-gray-50/30 border-gray-300">
       <nav className="w-full max-w-7xl mx-auto mt-0 px-4 ">
-        <div className="backdrop-blur-3xl px-4 py-3 flex justify-between items-center shadow-lg">
+        <div className="px-4 py-3 flex justify-between items-center">
           <div
             onClick={goHome}
             className="text-xl font-bold text-orange-400 tracking-wide cursor-pointer"
@@ -33,15 +33,17 @@ const NavBar = () => {
             Coffee
           </div>
 
-          <div className="hidden md:flex md:items-center md:space-x-0.5 gap-0.5 text-sm font-medium text-gray-100">
+          <div className="hidden md:flex md:items-center md:space-x-0.5 gap-0.5 text-sm font-medium dark:text-gray-100 text-gray-900">
             {links.map((link) => {
               const isActive = pathname === link.to;
               return (
                 <Link
                   key={link.name}
                   href={link.to}
-                  className={`transition-colors duration-200 hover:text-orange-100 hover:bg-orange-400/20 rounded-full px-6 py-2 ${
-                    isActive ? "text-gray-50 bg-orange-400/30" : ""
+                  className={`transition-colors duration-200 dark:hover:text-orange-100 hover:text-orange-600 hover:bg-orange-400/20 rounded-full px-6 py-2 ${
+                    isActive
+                      ? "dark:text-gray-50 text-gray-950 bg-orange-400/30"
+                      : ""
                   }`}
                 >
                   {link.name}
