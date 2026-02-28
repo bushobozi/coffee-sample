@@ -55,7 +55,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-5xl lg:text-7xl font-medium tracking-tight leading-tight uppercase">
+          <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-tight uppercase">
             Growing
             <span className="inline-block align-middle mx-2">
               <div className="h-10 w-24 lg:h-14 lg:w-32 rounded-full overflow-hidden border border-gray-200 relative shadow-inner">
@@ -149,7 +149,18 @@ const Hero = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-
+          <div className="flex justify-end">
+            <Button
+              variant="ghost"
+              size="xl"
+              type="button"
+              className="h-25 w-45 rounded-2xl"
+            >
+              <span className="text-gray-900 rounded-full p-2 group-hover:bg-gray-200 transition">
+                <SVG width="65" height="65" />
+              </span>
+            </Button>
+          </div>
           <div className="absolute bottom-28 left-8 flex space-x-2 z-10">
             {slides.map((_, idx) => (
               <button
