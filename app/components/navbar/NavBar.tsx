@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import Button from "../buttons/Button";
 import SVG from "../svg/SVG";
@@ -17,15 +18,32 @@ const links = [
 const NavBar = () => {
   const pathname = usePathname();
   const router = useRouter();
+  const { scrollY } = useScroll();
 
+  // As you scroll 50px, the background goes from transparent to blurry white
+  const backgroundColor = useTransform(
+    scrollY,
+    [0, 50],
+    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.8)"],
+  );
   function goHome() {
     router.push("/");
   }
 
   return (
-    <div className="sticky backdrop-blur-3xl top-0 z-50 border-r-0 border-l-0 border border-t-0 dark:border-gray-50/30 border-gray-300">
-      <nav className="w-full max-w-7xl mx-auto mt-0 px-4 ">
-        <div className="px-4 py-3 flex justify-between items-center">
+    <div className=" dark:bg-gray-800 w-full top-0 z-50 border-r-0 border-l-0 border-0 border-t-0 dark:border-gray-50/30 border-gray-300">
+      <motion.nav
+        style={{
+          backgroundColor,
+          backdropFilter: "blur(10px)",
+          position: "fixed",
+          top: 0,
+          width: "100%",
+          padding: "0",
+          zIndex: 1000,
+        }}
+      >
+        <div className="w-full max-w-7xl mx-auto mt-0 px-4 py-3 flex justify-between items-center">
           <div
             onClick={goHome}
             className="text-xl font-bold text-orange-400 tracking-wide cursor-pointer"
@@ -51,13 +69,12 @@ const NavBar = () => {
               );
             })}
           </div>
-
           <Button href="/" variant="primary" size="sm" roundedFull={true}>
             <span className="mx-4">Call Us</span>
             <SVG width="25" height="25" />
           </Button>
         </div>
-      </nav>
+      </motion.nav>
     </div>
   );
 };
