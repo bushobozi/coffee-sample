@@ -58,7 +58,7 @@ const Button = (buttonProps: IButton) => {
     sm: "px-3 py-1 text-sm",
     md: "px-6 py-3 text-base",
     lg: "px-7 py-3.5 text-lg",
-    xl: "px-8 py-4 text-xl",
+    xl: "lg:px-8 px-4 lg:py-4 py-3 text-xl",
   };
 
   const roundedClass = roundedFull ? "rounded-full" : "";
