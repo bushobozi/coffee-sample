@@ -118,7 +118,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <div className="relative w-full h-125 lg:h-150 rounded-3xl overflow-hidden shadow-2xl ring-0 ring-gray-900/5">
+        <div className="relative w-full h-125 lg:h-150 lg:rounded-3xl rounded-2xl overflow-hidden shadow-2xl ring-0 ring-gray-900/5">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -135,7 +135,6 @@ const Hero = () => {
                 className="object-cover"
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ clipPath: "url(#clip-another1)" }}
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8 backdrop-blur-md bg-white/5 border-t border-white/10 rounded-t-3xl">
@@ -149,18 +148,6 @@ const Hero = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-          <div className="absolute top-0 right-0 z-20 p-4 lg:static lg:p-0 lg:flex hidden lg:justify-end">
-            <Button
-              variant="ghost"
-              size="xl"
-              type="button"
-              className="h-16 w-28 lg:h-25 lg:w-45 rounded-2xl"
-            >
-              <span className="text-gray-900 rounded-full p-2 group-hover:bg-gray-200 transition scale-75 lg:scale-100 block">
-                <SVG width="65" height="65" />
-              </span>
-            </Button>
-          </div>
           <div className="absolute bottom-28 left-8 flex space-x-2 z-10">
             {slides.map((_, idx) => (
               <button

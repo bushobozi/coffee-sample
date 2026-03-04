@@ -52,7 +52,7 @@ const NavBar = () => {
             })}
           </div>
 
-          <Button href="/" variant="primary" size="sm">
+          <Button href="/" variant="primary" size="sm" roundedFull={true}>
             <span className="mx-4">Call Us</span>
             <SVG width="25" height="25" />
           </Button>
