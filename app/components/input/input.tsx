@@ -61,7 +61,7 @@ export const input = (InputProps: MyInput) => {
     <>
       <div className="flex gap-0.5 flex-col w-full">
         {label && (
-          <label htmlFor={id} className="my-2 text-xl">
+          <label htmlFor={id} className="my-2">
             {label}
             {required && <span>*</span>}
           </label>
@@ -108,7 +108,7 @@ export const textArea = (textAreaProps: MyTextarea) => {
     <>
       <div className="flex gap-0.5 flex-col w-full">
         {label && (
-          <label htmlFor={id} className="my-2 text-xl">
+          <label htmlFor={id} className="my-2">
             {label}
             {required && <span>*</span>}
           </label>

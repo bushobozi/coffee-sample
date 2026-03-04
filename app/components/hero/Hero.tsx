@@ -118,7 +118,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <div className="relative w-full h-125 lg:h-150 lg:rounded-3xl rounded-2xl overflow-hidden shadow-2xl ring-0 ring-gray-900/5">
+        <div className="relative w-full h-125 lg:h-150 lg:rounded-3xl rounded-2xl overflow-hidden shadow-0 ring-0 ring-gray-900/5">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
