@@ -61,7 +61,7 @@ export const input = (InputProps: MyInput) => {
     <>
       <div className="flex gap-0.5 flex-col w-full">
         {label && (
-          <label htmlFor={id} className="my-2">
+          <label htmlFor={id} className="my-2 dark:text-gray-100">
             {label}
             {required && <span>*</span>}
           </label>
@@ -79,7 +79,7 @@ export const input = (InputProps: MyInput) => {
           defaultValue={defaultValue}
           value={value}
           onChange={onChange}
-          className={`lg:py-4 py-2.5  lg:px-8 px-6 border border-gray-300 rounded-full w-full focus:ring-4 focus:ring-orange-500 ${className}`}
+          className={`lg:py-2 py-1.5  lg:px-6 px-4 border border-gray-300 rounded-full w-full focus:ring-4 focus:ring-orange-500 dark:text-gray-100 ${className}`}
         />
         {error && <span className="error">{error}</span>}
         {success && <span className="success">{success}</span>}
@@ -108,7 +108,7 @@ export const textArea = (textAreaProps: MyTextarea) => {
     <>
       <div className="flex gap-0.5 flex-col w-full">
         {label && (
-          <label htmlFor={id} className="my-2">
+          <label htmlFor={id} className="my-2 dark:text-gray-100">
             {label}
             {required && <span>*</span>}
           </label>
@@ -119,7 +119,7 @@ export const textArea = (textAreaProps: MyTextarea) => {
           rows={rows || 4}
           cols={cols || 50}
           maxLength={max}
-          className={`w-full px-6 py-3 mt-2 border border-gray-300 rounded-3xl focus:ring-4 focus:ring-orange-500 transition duration-200 ${className || ""}`}
+          className={`w-full px-6 py-3 mt-2 border border-gray-300 rounded-3xl focus:ring-4 focus:ring-orange-500 transition duration-200 dark:text-gray-100 ${className || ""}`}
           value={value}
           onChange={onChange}
           required={required}

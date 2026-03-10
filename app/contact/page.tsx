@@ -3,7 +3,7 @@ import { Input, TextArea, Grid, Button } from "../components";
 export default function Contact() {
   return (
     <div className="flex justify-start items-center h-fit flex-col p-3">
-      <h1 className="text-center my-8 lg:text-5xl text-4xl font-bold">
+      <h1 className="text-center my-8 lg:text-5xl text-4xl font-bold dark:text-gray-100">
         Write to Us Today
       </h1>
       <div className="max-w-4xl container mx-auto p-2">
@@ -43,7 +43,7 @@ export default function Contact() {
           rows={8}
         />
         <div className="mb-4" />
-        <Button variant="primary" size="xl" block={true} roundedFull={true}>
+        <Button variant="primary" size="md" block={true} roundedFull={true}>
           Send Message
         </Button>
       </div>
