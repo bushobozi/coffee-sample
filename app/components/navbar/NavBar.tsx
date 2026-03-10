@@ -9,10 +9,10 @@ const links = [
   { name: "Home", to: "/" },
   { name: "About Us", to: "/about" },
   { name: "Portofolio", to: "/portofolio" },
-  { name: "Blog", to: "/blog" },
+  { name: "News & Updates", to: "/blog" },
   { name: "Contact Us", to: "/contact" },
-  { name: "Export Portal", to: "/export-portal" },
-  { name: "Pages", to: "/pages" },
+  // { name: "Export Portal", to: "/export-portal" },
+  // { name: "Pages", to: "/pages" },
 ];
 
 const NavBar = () => {
@@ -24,7 +24,7 @@ const NavBar = () => {
   const backgroundColor = useTransform(
     scrollY,
     [0, 50],
-    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.8)"],
+    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.2)"],
   );
   function goHome() {
     router.push("/");
@@ -35,7 +35,7 @@ const NavBar = () => {
       <motion.nav
         style={{
           backgroundColor,
-          backdropFilter: "blur(10px)",
+          backdropFilter: "blur(55px)",
           position: "fixed",
           top: 0,
           width: "100%",
@@ -69,8 +69,13 @@ const NavBar = () => {
               );
             })}
           </div>
-          <Button href="/" variant="primary" size="sm" roundedFull={true}>
-            <span className="mx-4">Call Us</span>
+          <Button
+            href="/contact"
+            variant="primary"
+            size="sm"
+            roundedFull={true}
+          >
+            <span className="mx-4">Reach Us</span>
             <SVG width="25" height="25" />
           </Button>
         </div>

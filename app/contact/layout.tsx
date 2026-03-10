@@ -23,11 +23,11 @@ export default function ContactLayout({ children }: LayoutProps) {
             style={{
               filter: "grayscale(1) contrast(1.2) opacity(0.4)",
             }}
-            className="filter: grayscale(1) contrast(1.2) opacity(0.4);"
+            className="filter:grayscale(1) contrast(1.2) opacity(0.4) dark:opacity(0.1);"
           ></iframe>
         </div>
         <div className="container px-5 py-24 mx-auto flex">
-          <div className="lg:w-2/3 md:w-1/2 bg-white rounded-3xl p-4 flex flex-col md:ml-auto w-full mt-10 min-h-fit md:mt-0 relative z-10">
+          <div className="lg:w-2/3 md:w-1/2 bg-white dark:bg-gray-950 rounded-3xl p-4 flex flex-col md:ml-auto w-full mt-10 min-h-fit md:mt-0 relative z-10">
             {children}
           </div>
         </div>
